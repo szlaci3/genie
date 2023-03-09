@@ -1,57 +1,11 @@
-# Ant Design Pro
+ 
+# Laszlo Szalai | 66Genie
 
-This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
+I invite you to view a similar web application demo project of mine deployed on Netlify:
+https://szlaci3-hr.netlify.app/dist/
 
-## Environment Prepare
+The 66Genie web application is using React hooks and the Ant Design component library alongside npm packages like Babel, Webpack, Umi, Moment and React-Router.
 
-Install `node_modules`:
+The Table page displays the existing data. Observe the fixed header, while you scroll along two axis. Behind the scene, it is a virtual table, so the cells are being added and deleted while they enter and leave the view. This is optimal for a lightweight experience in case of large tables with both many columns and high amount of data.
 
-```bash
-npm install
-```
-
-or
-
-```bash
-yarn
-```
-
-## Provided Scripts
-
-Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
-
-Scripts provided in `package.json`. It's safe to modify or add additional script:
-
-### Start project
-
-```bash
-npm start
-```
-
-### Build project
-
-```bash
-npm run build
-```
-
-### Check code style
-
-```bash
-npm run lint
-```
-
-You can also use script to auto fix some lint error:
-
-```bash
-npm run lint:fix
-```
-
-### Test code
-
-```bash
-npm test
-```
-
-## More
-
-You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).
+The Form modal uses many types of input, with relevant validation functionality. It is designed for entering new data.
