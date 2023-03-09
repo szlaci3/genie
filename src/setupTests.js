@@ -1,4 +1,6 @@
 ﻿// do some test init
+import '@testing-library/jest-dom';
+import "@testing-library/jest-dom/extend-expect";
 
 const localStorageMock = {
   getItem: jest.fn(),
