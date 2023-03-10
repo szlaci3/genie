@@ -211,8 +211,6 @@ const TableList: React.FC = () => {
 
   return (
     <PageContainer>
-      <img src={require("@/img/flx-angle.png")} alt="PDF" className="pumukli"/>
-
       <ProTable<API.RuleListItem, API.PageParams>
         headerTitle={intl.formatMessage({
           id: 'pages.searchTable.title',
