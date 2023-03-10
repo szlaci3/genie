@@ -9,3 +9,7 @@ export async function fakeError(params) {
 export async function getEvents(params) {
   return request.get(`${SERVERIP}events`, {params});
 }
+
+export async function getView(params) {
+  return request.get(`${SERVERIP}view`, {params});
+}

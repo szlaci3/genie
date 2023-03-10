@@ -5,9 +5,15 @@ import { useRequest } from 'umi';
 
 jest.mock('umi', () => ({ useModel: jest.fn(), useRequest: jest.fn() }));
 
+type Response = {
+    code: number,
+    data: {title: string}[],
+    msg: string
+}
+
 beforeEach(() => {
     // useModel.mockReturnValue({ initialState: { currentUser: { vip: '1' } } });
-    const response = {
+    const response: Response = {
         code: 1,
         data: [{title: 'OtherTitle'}],
         msg: 'success',
@@ -20,8 +26,8 @@ afterEach(cleanup);
 
 describe("Index page", () => {
     it('Renders Index', () => {
-        const { getByText } = render(<Index/>);
+        const { getByText }: { getByText: function } = render(<Index/>);
         screen.debug();
-        expect(getByText('OtherTitle')).toBeInTheDocument();
+        expect(getByText(/OtherTitle/i)).toBeInTheDocument();
     })
 });

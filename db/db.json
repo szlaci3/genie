@@ -3,6 +3,7 @@
     "code": 0,
     "msg": "Your request couldn't be handled."
   },
+  "view": ["id", "title", "startDate", "endDate", "type", "description"],
   "events": [
     {
       "id": "1",
