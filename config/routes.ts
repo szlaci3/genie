@@ -27,38 +27,12 @@
     component: '@/layouts/BasicLayout',
     authority: ['admin', 'user'],
     routes: [
-      { path: '/', redirect: '/welcome' },
+      { path: '/', redirect: '/index' },
       {
-        path: '/welcome',
-        name: 'welcome',
-        component: './Welcome',
+        path: '/index',
+        name: 'Index',
+        component: './Index',
         icon: 'smile',
-      },
-      {
-        path: '/admin',
-        name: 'admin',
-        access: 'canAdmin',
-        component: './Admin',
-        icon: 'table',
-        routes: [
-          {
-            path: '/admin/sub-page',
-            name: 'sub-page',
-            component: './Welcome',
-          },
-        ],
-      },
-      {
-        name: 'list.table-list',
-        path: '/list',
-        component: './TableList/TableList',
-        icon: 'smile',
-      },
-      {
-        name: 'play',
-        path: '/play/:id',
-        component: './Play/Play',
-        icon: 'table',
       },
       { path: '/', exact: false, redirect: '/404' },
     ]
