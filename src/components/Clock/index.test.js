@@ -1,6 +1,5 @@
 import Clock from "./index";
-import {render, screen, cleanup} from "@testing-library/react";
-import {delay} from "../../utils/utils";
+import {render, screen} from "@testing-library/react";
 
 const timeRegEx = /\d*:\d*:\d*/;
 const clock = <Clock

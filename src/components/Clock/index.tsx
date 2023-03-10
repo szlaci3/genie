@@ -6,12 +6,11 @@ function Clock(props) {
 
   const getTime = () => {
     if (props.hasSeconds) {
-      let m = (new Date).toTimeString();
+      const m = (new Date).toTimeString();
       return m.slice(0, m.lastIndexOf(":") + 3);
-    } else {
-      let str = (new Date).toLocaleTimeString();
-      return str.slice(0, str.lastIndexOf(":")) + str.slice(str.lastIndexOf(":") + 3);
     }
+    const str = (new Date).toLocaleTimeString();
+    return str.slice(0, str.lastIndexOf(":")) + str.slice(str.lastIndexOf(":") + 3);
   }
 
   useEffect(() => {
