@@ -1,8 +1,9 @@
 import React from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
 import { Card, Alert, Typography } from 'antd';
-import { useIntl, FormattedMessage, Link } from 'umi';
+import { useIntl, FormattedMessage, Link, useRequest } from 'umi';
 import styles from './Welcome.less';
+import { getEvents } from '../services/services';
 
 const CodePreview: React.FC = ({ children }) => (
   <pre className={styles.pre}>
@@ -14,6 +15,14 @@ const CodePreview: React.FC = ({ children }) => (
 
 export default (): React.ReactNode => {
   const intl = useIntl();
+  
+  const response = useRequest(getEvents,
+    {
+      formatResult: res => res,
+    }
+  );
+  const {data} = response;
+
   return (
     <PageContainer>
       <Card>
@@ -30,6 +39,10 @@ export default (): React.ReactNode => {
               marginBottom: 24,
             }}
           />
+        <Typography.Text strong>
+          {JSON.stringify(data)}
+        </Typography.Text>
+
         <Typography.Text strong>
           <Link to="./play/252">
             GoThere
